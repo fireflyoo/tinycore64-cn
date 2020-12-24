@@ -10,7 +10,10 @@ export XMODIFIERS=@im=yong
 export QT_IM_MODULE=yong  
 yong -d  
 ```
-已知BUG  
+yong.tcz采用小小输入法2.5.0  
+为64位GTK3界面的版本，适用于tinycore 64位版本  
+
+yong.tcz的已知BUG  
 1.无法在原生X应用下(如aterm/xterm)输入中文.  
 2.无法调出输入法设置面板.  
 ~~3.未添加自己常用的小鹤双拼输入法.~~
