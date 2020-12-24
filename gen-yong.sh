@@ -31,10 +31,17 @@ sed -i -e 's/default=0/default=4/' \
        -e "s/page=- =/page=, ./"   \
        -e "/keypad=0/a\ABCD=1"   \
 usr/local/share/yong/yong.ini
-
-cat ../yong/entry/cloud.ini >> usr/local/share/yong/yong.ini
+cp ../hepy.sp usr/local/share/yong/
+cat << EOF >> usr/local/share/yong/yong.ini
+[hepy]
+name=双拼
+engine=libmb.so
+arg=mb/pinyin.txt
+overlay=mb/sp.ini
+sp=hepy
+EOF
 sed -i -e 's/4=gbk/4=pinyin/' \
-       -e 's/5=pinyin/5=cloud/' \
+       -e 's/5=pinyin/5=hepy/' \
 usr/local/share/yong/yong.ini
 
 # modify end
